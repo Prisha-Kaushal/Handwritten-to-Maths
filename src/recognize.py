@@ -6,11 +6,13 @@ image_path = "processed_expression.png"
 print("Loading model...")
 
 processor = TrOCRProcessor.from_pretrained(
-    "fhswf/TrOCR_Math_handwritten"
+    "fhswf/TrOCR_Math_handwritten",
+    local_files_only=True
 )
 
 model = VisionEncoderDecoderModel.from_pretrained(
-    "fhswf/TrOCR_Math_handwritten"
+    "fhswf/TrOCR_Math_handwritten",
+    local_files_only=True
 )
 
 print("Model loaded successfully!")
